@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LangChain + LangGraph Fundamentals</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AI<span>•</span>Learning</a>
+
+            <nav>
+                <a href="#day1">Day 1</a>
+                <a href="#day2">Day 2</a>
+                <a href="#day3">Day 3</a>
+                <a href="#day4">Day 4</a>
+                <a href="#day5">Day 5</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- =========================
+             HERO
+        ========================== -->
+        <section class="hero">
+            <div class="hero-content">
+
+                <p class="eyebrow">DEV SYNT AI INTERNSHIP • PHASE 1</p>
+
+                <h1>
+                    LangChain +
+                    <span>LangGraph</span>
+                    Fundamentals
+                </h1>
+
+                <p class="hero-description">
+                    A five-day learning journey exploring LLM applications,
+                    chains, prompt templates, memory, tools, LangGraph,
+                    and orchestrator agents.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#day1" class="btn primary-btn">
+                        Explore My Learning
+                    </a>
+
+                    <a href="#takeaways" class="btn secondary-btn">
+                        Key Takeaways
+                    </a>
+                </div>
+
+            </div>
+
+            <div class="hero-visual">
+
+                <div class="flow-card">
+                    <div class="flow-node">Prompt</div>
+                    <div class="flow-arrow">↓</div>
+
+                    <div class="flow-node active">LLM</div>
+                    <div class="flow-arrow">↓</div>
+
+                    <div class="flow-node">Parser</div>
+                    <div class="flow-arrow">↓</div>
+
+                    <div class="flow-node">Result</div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =========================
+             OVERVIEW
+        ========================== -->
+        <section class="overview section">
+
+            <div class="section-heading">
+                <p class="section-label">THE JOURNEY</p>
+
+                <h2>
+                    From simple LLM calls
+                    to intelligent workflows.
+                </h2>
+
+                <p>
+                    Each day introduced a new layer of understanding,
+                    gradually moving from basic model interaction to
+                    multi-agent coordination.
+                </p>
+            </div>
+
+            <div class="journey-grid">
+
+                <div class="journey-card">
+                    <span>01</span>
+                    <h3>LangChain</h3>
+                    <p>LLM applications and chains</p>
+                </div>
+
+                <div class="journey-card">
+                    <span>02</span>
+                    <h3>Prompts & Parsers</h3>
+                    <p>Reusable prompts and structured output</p>
+                </div>
+
+                <div class="journey-card">
+                    <span>03</span>
+                    <h3>Memory & Tools</h3>
+                    <p>Context and external capabilities</p>
+                </div>
+
+                <div class="journey-card">
+                    <span>04</span>
+                    <h3>LangGraph</h3>
+                    <p>Stateful graph-based workflows</p>
+                </div>
+
+                <div class="journey-card">
+                    <span>05</span>
+                    <h3>Orchestrators</h3>
+                    <p>Coordinating specialized agents</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DAY 1
+        ========================== -->
+        <section id="day1" class="learning-section section">
+
+            <div class="day-number">01</div>
+
+            <div class="section-heading">
+                <p class="section-label">DAY 01</p>
+
+                <h2>What is LangChain?</h2>
+
+                <p>
+                    LangChain is a framework for building LLM-powered
+                    applications using reusable components such as
+                    prompts, models, parsers, tools, and retrieval systems.
+                </p>
+            </div>
+
+
+            <div class="comparison">
+
+                <div class="comparison-card">
+                    <span class="tag">RAW API</span>
+
+                    <h3>Direct Model Interaction</h3>
+
+                    <p>
+                        With a raw API call, the application directly
+                        communicates with the model provider and manually
+                        handles the request and response.
+                    </p>
+
+                    <div class="code-flow">
+                        Your Code
+                        <span>↓</span>
+                        API Request
+                        <span>↓</span>
+                        LLM
+                        <span>↓</span>
+                        Response
+                    </div>
+                </div>
+
+
+                <div class="comparison-card highlighted">
+                    <span class="tag">LANGCHAIN</span>
+
+                    <h3>Reusable Components</h3>
+
+                    <p>
+                        LangChain allows different components to be
+                        connected into reusable workflows called chains.
+                    </p>
+
+                    <div class="code-flow">
+                        Prompt
+                        <span>↓</span>
+                        LLM
+                        <span>↓</span>
+                        Parser
+                        <span>↓</span>
+                        Result
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="concept-box">
+
+                <h3>What is a Chain?</h3>
+
+                <p>
+                    A chain is a predefined sequence of components where
+                    the output of one component is passed to the next.
+                </p>
+
+                <div class="inline-code-flow">
+                    <span>PromptTemplate</span>
+                    <b>→</b>
+                    <span>LLM</span>
+                    <b>→</b>
+                    <span>Output Parser</span>
+                </div>
+
+                <p class="small-note">
+                    LangChain Expression Language (LCEL) uses the
+                    <code>|</code> operator to compose these components.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DAY 2
+        ========================== -->
+        <section id="day2" class="learning-section section">
+
+            <div class="day-number">02</div>
+
+            <div class="section-heading">
+                <p class="section-label">DAY 02</p>
+
+                <h2>Prompt Templates & Output Parsers</h2>
+
+                <p>
+                    Prompt templates make instructions reusable, while
+                    output parsers help applications handle model responses
+                    in predictable formats.
+                </p>
+            </div>
+
+
+            <div class="two-column">
+
+                <div class="info-card">
+
+                    <span class="icon">01</span>
+
+                    <h3>Prompt Template</h3>
+
+                    <p>
+                        A reusable prompt containing placeholders that can
+                        be filled with different values.
+                    </p>
+
+                    <div class="code-block">
+                        <code>
+                            Explain {topic} in simple words.
+                        </code>
+                    </div>
+
+                    <p class="example-text">
+                        <strong>topic = "LangChain"</strong>
+                        <br>
+                        → Explain LangChain in simple words.
+                    </p>
+
+                </div>
+
+
+                <div class="info-card">
+
+                    <span class="icon">02</span>
+
+                    <h3>Output Parser</h3>
+
+                    <p>
+                        A parser helps convert or handle the model's output
+                        in a format that an application can work with.
+                    </p>
+
+                    <div class="parser-flow">
+                        <span>LLM</span>
+                        <b>→</b>
+                        <span>Parser</span>
+                        <b>→</b>
+                        <span>Usable Output</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="structured-output">
+
+                <div>
+                    <p class="section-label">STRUCTURED OUTPUT</p>
+
+                    <h3>From free-form text to predictable data</h3>
+
+                    <p>
+                        Applications often need specific fields instead
+                        of a paragraph. Structured output makes the result
+                        easier for software to process.
+                    </p>
+                </div>
+
+
+                <div class="json-example">
+
+<pre>{
+  "name": "Python",
+  "difficulty": "Beginner",
+  "uses": [
+    "Web Development",
+    "Automation",
+    "Data Science"
+  ]
+}</pre>
+
+                </div>
+
+            </div>
+
+
+            <div class="concept-grid">
+
+                <div>
+                    <h3>StrOutputParser</h3>
+                    <p>
+                        Used when the application needs the model response
+                        as a clean string.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>JsonOutputParser</h3>
+                    <p>
+                        Used when the application needs structured
+                        JSON-style output.
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Pydantic</h3>
+                    <p>
+                        Defines and validates the expected structure and
+                        data types.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DAY 3
+        ========================== -->
+        <section id="day3" class="learning-section section">
+
+            <div class="day-number">03</div>
+
+            <div class="section-heading">
+                <p class="section-label">DAY 03</p>
+
+                <h2>Memory & Tool Calling</h2>
+
+                <p>
+                    AI applications can maintain relevant conversation
+                    context and use external tools to perform tasks or
+                    access information.
+                </p>
+            </div>
+
+
+            <div class="memory-tool-grid">
+
+                <div class="large-card">
+
+                    <span class="tag">MEMORY</span>
+
+                    <h3>Context across conversations</h3>
+
+                    <p>
+                        Memory is an application-level mechanism for storing
+                        and supplying relevant previous information to the
+                        model.
+                    </p>
+
+                    <div class="vertical-flow">
+                        <span>User Message</span>
+                        <b>↓</b>
+                        <span>Conversation History</span>
+                        <b>↓</b>
+                        <span>LLM</span>
+                        <b>↓</b>
+                        <span>Context-aware Response</span>
+                    </div>
+
+                    <p class="small-note">
+                        The LLM does not automatically have permanent memory.
+                        The application manages and provides relevant context.
+                    </p>
+
+                </div>
+
+
+                <div class="large-card">
+
+                    <span class="tag">TOOL CALLING</span>
+
+                    <h3>Giving the LLM external capabilities</h3>
+
+                    <p>
+                        Tools allow an AI application to interact with
+                        services such as calculators, databases, APIs,
+                        search systems, and other functions.
+                    </p>
+
+                    <div class="tool-grid">
+
+                        <span>Calculator</span>
+                        <span>Database</span>
+                        <span>Weather API</span>
+                        <span>Search</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tool-flow">
+
+                <div class="flow-title">
+                    <p class="section-label">TOOL CALLING FLOW</p>
+                    <h3>The LLM requests; the application executes.</h3>
+                </div>
+
+                <div class="horizontal-flow">
+
+                    <span>LLM</span>
+                    <b>→</b>
+                    <span>Tool Request</span>
+                    <b>→</b>
+                    <span>Application</span>
+                    <b>→</b>
+                    <span>Tool</span>
+                    <b>→</b>
+                    <span>Result</span>
+                    <b>→</b>
+                    <span>LLM</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DAY 4
+        ========================== -->
+        <section id="day4" class="learning-section section">
+
+            <div class="day-number">04</div>
+
+            <div class="section-heading">
+                <p class="section-label">DAY 04</p>
+
+                <h2>What is LangGraph?</h2>
+
+                <p>
+                    LangGraph is a framework for building stateful,
+                    graph-based workflows and agent systems with nodes,
+                    edges, state, branching, and loops.
+                </p>
+            </div>
+
+
+            <div class="graph-visual">
+
+                <div class="graph-node">START</div>
+
+                <div class="graph-arrow">↓</div>
+
+                <div class="graph-node main-node">
+                    Analyze Request
+                </div>
+
+                <div class="branch">
+
+                    <div class="branch-line"></div>
+
+                    <div class="branch-option">
+                        <span>YES</span>
+                        <div class="graph-node">Call Tool</div>
+                    </div>
+
+                    <div class="branch-option">
+                        <span>NO</span>
+                        <div class="graph-node">Respond</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="concept-grid four">
+
+                <div>
+                    <span class="concept-number">01</span>
+                    <h3>Nodes</h3>
+                    <p>
+                        Individual steps or functions that perform work.
+                    </p>
+                </div>
+
+                <div>
+                    <span class="concept-number">02</span>
+                    <h3>Edges</h3>
+                    <p>
+                        Connections that determine what happens next.
+                    </p>
+                </div>
+
+                <div>
+                    <span class="concept-number">03</span>
+                    <h3>State</h3>
+                    <p>
+                        Shared information carried and updated through
+                        the workflow.
+                    </p>
+                </div>
+
+                <div>
+                    <span class="concept-number">04</span>
+                    <h3>Conditional Edges</h3>
+                    <p>
+                        Routes execution based on a condition or state.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="comparison">
+
+                <div class="comparison-card">
+
+                    <span class="tag">CHAIN</span>
+
+                    <h3>Fixed execution path</h3>
+
+                    <div class="simple-diagram">
+                        A <b>→</b> B <b>→</b> C <b>→</b> D
+                    </div>
+
+                    <p>
+                        The sequence is predefined and execution follows
+                        the same basic path.
+                    </p>
+
+                </div>
+
+
+                <div class="comparison-card highlighted">
+
+                    <span class="tag">LANGGRAPH</span>
+
+                    <h3>Multiple possible paths</h3>
+
+                    <div class="simple-diagram">
+                        A <b>→</b> B <b>↙</b> <b>↘</b> C / D
+                    </div>
+
+                    <p>
+                        The workflow and possible routes are defined,
+                        but the path can be selected dynamically at runtime.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             DAY 5
+        ========================== -->
+        <section id="day5" class="learning-section section">
+
+            <div class="day-number">05</div>
+
+            <div class="section-heading">
+                <p class="section-label">DAY 05</p>
+
+                <h2>Orchestrator Agents</h2>
+
+                <p>
+                    An orchestrator coordinates specialized agents,
+                    determines what needs to happen, and routes work
+                    through a larger AI workflow.
+                </p>
+            </div>
+
+
+            <div class="orchestrator">
+
+                <div class="orchestrator-node user-node">
+                    USER REQUEST
+                </div>
+
+                <div class="orchestrator-line">↓</div>
+
+                <div class="orchestrator-node main-orchestrator">
+                    ORCHESTRATOR
+                    <small>Coordinates the workflow</small>
+                </div>
+
+                <div class="agent-branches">
+
+                    <div class="agent">
+                        <span>01</span>
+                        <h3>Research Agent</h3>
+                        <p>Finds and summarizes information.</p>
+                    </div>
+
+                    <div class="agent">
+                        <span>02</span>
+                        <h3>Analysis Agent</h3>
+                        <p>Processes and analyzes information.</p>
+                    </div>
+
+                    <div class="agent">
+                        <span>03</span>
+                        <h3>Writing Agent</h3>
+                        <p>Creates the final response.</p>
+                    </div>
+
+                </div>
+
+                <div class="orchestrator-line">↓</div>
+
+                <div class="orchestrator-node result-node">
+                    FINAL RESULT
+                </div>
+
+            </div>
+
+
+            <div class="orchestrator-explanation">
+
+                <div>
+                    <p class="section-label">WHY AN ORCHESTRATOR?</p>
+
+                    <h3>One system, multiple specialized responsibilities.</h3>
+                </div>
+
+                <ul>
+                    <li>Breaks complex tasks into manageable responsibilities.</li>
+                    <li>Routes work to the appropriate specialized agent.</li>
+                    <li>Coordinates information between agents.</li>
+                    <li>Works naturally with stateful workflows.</li>
+                    <li>Makes multi-agent systems easier to extend.</li>
+                </ul>
+
+            </div>
+
+
+            <div class="important-note">
+
+                <strong>Important distinction:</strong>
+
+                <p>
+                    LangGraph is a framework for building graph-based
+                    workflows. An orchestrator is an architectural role
+                    responsible for coordinating agents or tasks.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             TAKEAWAYS
+        ========================== -->
+        <section id="takeaways" class="takeaways section">
+
+            <div class="section-heading center">
+
+                <p class="section-label">FINAL TAKEAWAYS</p>
+
+                <h2>What I learned</h2>
+
+                <p>
+                    The five-day journey connected individual LLM concepts
+                    into a bigger picture of how modern AI applications
+                    can be designed.
+                </p>
+
+            </div>
+
+
+            <div class="takeaway-grid">
+
+                <div>
+                    <span>01</span>
+                    <h3>Build with components</h3>
+                    <p>
+                        LangChain provides reusable components for
+                        constructing LLM applications.
+                    </p>
+                </div>
+
+                <div>
+                    <span>02</span>
+                    <h3>Make output predictable</h3>
+                    <p>
+                        Prompt templates and structured output make
+                        applications more consistent and easier to integrate.
+                    </p>
+                </div>
+
+                <div>
+                    <span>03</span>
+                    <h3>Extend LLM capabilities</h3>
+                    <p>
+                        Memory provides context while tools allow
+                        applications to interact with external systems.
+                    </p>
+                </div>
+
+                <div>
+                    <span>04</span>
+                    <h3>Think in workflows</h3>
+                    <p>
+                        LangGraph provides nodes, edges, state, and
+                        conditional routing for complex workflows.
+                    </p>
+                </div>
+
+                <div>
+                    <span>05</span>
+                    <h3>Coordinate intelligence</h3>
+                    <p>
+                        Orchestrators can coordinate specialized agents
+                        to solve larger tasks.
+                    </p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+    <footer>
+
+        <div class="footer-content">
+
+            <div>
+                <div class="logo">AI<span>•</span>Learning</div>
+
+                <p>
+                    LangChain + LangGraph Fundamentals
+                </p>
+            </div>
+
+            <p class="footer-note">
+                DevSynt AI Internship • Project 2 • Phase 1
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
+
