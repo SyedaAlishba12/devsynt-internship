@@ -1,0 +1,13 @@
+**Retail Sales Insight Report**  
+*(Based on the latest sales snapshot)*
+
+| Item | Insight |
+|------|---------|
+| **1. Overall performance** | Total sales reached **$2,297,200.86** with a profit of **$286,397.02**. On average, each order brought in **$229.86** and earned **$28.66** in profit. |
+| **2. Best‑performing product** | **Canon imageCLASS 2200 Advanced Copier** led the pack with **$61,599.82** in sales. |
+| **3. Best‑performing region** | The **West** region generated the highest revenue, **$725,457.82**. |
+| **4. Best‑performing category** | **Technology** products topped the chart with **$836,154.03** in sales. |
+| **5. Most profitable category** | The same **Technology** category also delivered the highest profit, **$145,454.95**. |
+| **6. Two practical recommendations** | 1. **Boost Technology marketing** – since this category drives both sales and profit, allocate more ad spend and promotions to it. 2. **Expand West‑region presence** – consider opening a pop‑up or partnering with local distributors to capture more of the strong West market. |
+
+*These insights are straightforward and ready for action.*

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retail Sales Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#dashboard" class="logo">
+                <span class="logo-mark">RS</span>
+                <span>Retail Analytics</span>
+            </a>
+            <div class="nav-links">
+                <a href="#dashboard">Dashboard</a>
+                <a href="#metrics">Metrics</a>
+                <a href="#analysis">Analysis</a>
+                <a href="#insights">Insights</a>
+                <a href="#pipeline">Pipeline</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <header class="header" id="dashboard">
+        <div class="hero-content">
+            <div class="hero-badge">
+                MULTI-AGENT RETAIL ANALYTICS
+            </div>
+            <h1>
+                Retail Sales<br>
+                <span>Dashboard</span>
+            </h1>
+            <p class="subtitle">
+                A static overview generated from the cleaned Superstore
+                dataset using a multi-agent analytics pipeline with
+                AI-powered business insights.
+            </p>
+            <a href="#metrics" class="hero-button">
+                Explore Dashboard
+                <span>↓</span>
+            </a>
+        </div>
+
+        <div class="hero-decoration">
+            <div class="circle circle-one"></div>
+            <div class="circle circle-two"></div>
+            <div class="circle circle-three"></div>
+        </div>
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+    ========================== -->
+
+    <main class="container">
+
+        <!-- =========================
+             METRICS
+        ========================== -->
+
+        <section id="metrics">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">
+                        01 / OVERVIEW
+                    </span>
+                    <h2>
+                        Key Performance Metrics
+                    </h2>
+                    <p>
+                        Overall performance from the analyzed sales data.
+                    </p>
+                </div>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-card">
+                    <div class="metric-icon sales-icon">
+                        $
+                    </div>
+                    <span class="metric-label">
+                        Total Sales
+                    </span>
+                    <span class="metric-value">
+                        $2,297,200.86
+                    </span>
+                    <span class="metric-description">
+                        Overall revenue
+                    </span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon profit-icon">
+                        ↗
+                    </div>
+                    <span class="metric-label">
+                        Total Profit
+                    </span>
+                    <span class="metric-value">
+                        $286,397.02
+                    </span>
+                    <span class="metric-description">
+                        Overall profit
+                    </span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon quantity-icon">
+                        #
+                    </div>
+                    <span class="metric-label">
+                        Total Quantity
+                    </span>
+                    <span class="metric-value">
+                        37,873
+                    </span>
+                    <span class="metric-description">
+                        Units sold
+                    </span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon orders-icon">
+                        ○
+                    </div>
+                    <span class="metric-label">
+                        Total Orders
+                    </span>
+                    <span class="metric-value">
+                        5,009
+                    </span>
+                    <span class="metric-description">
+                        Unique orders
+                    </span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon average-icon">
+                        ≈
+                    </div>
+                    <span class="metric-label">
+                        Average Sale
+                    </span>
+                    <span class="metric-value">
+                        $229.86
+                    </span>
+                    <span class="metric-description">
+                        Average per sale
+                    </span>
+                </div>
+
+                <div class="metric-card">
+                    <div class="metric-icon average-profit-icon">
+                        +
+                    </div>
+                    <span class="metric-label">
+                        Average Profit
+                    </span>
+                    <span class="metric-value">
+                        $28.66
+                    </span>
+                    <span class="metric-description">
+                        Average per sale
+                    </span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             SALES ANALYSIS
+        ========================== -->
+
+        <section id="analysis">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">
+                        02 / ANALYSIS
+                    </span>
+                    <h2>
+                        Sales Analysis
+                    </h2>
+                    <p>
+                        Visual summaries produced by the Visualization Agent.
+                    </p>
+                </div>
+            </div>
+
+            <div class="charts-grid">
+                <!-- Category Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div>
+                            <span class="chart-number">
+                                A
+                            </span>
+                            <h3>
+                                Sales by Category
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="chart-description">
+                        Technology leads total category sales.
+                    </p>
+                    <img src="assets/sales-by-category.png" alt="Bar chart showing sales by category">
+                </div>
+
+                <!-- Region Chart -->
+                <div class="chart-card">
+                    <div class="chart-header">
+                        <div>
+                            <span class="chart-number">
+                                B
+                            </span>
+                            <h3>
+                                Sales by Region
+                            </h3>
+                        </div>
+                    </div>
+                    <p class="chart-description">
+                        The West region has the highest sales.
+                    </p>
+                    <img src="assets/sales-by-region.png" alt="Bar chart showing sales by region">
+                </div>
+            </div>
+
+            <!-- Monthly Chart -->
+            <div class="chart-card large-chart">
+                <div class="chart-header">
+                    <div>
+                        <span class="chart-number">
+                            C
+                        </span>
+                        <h3>
+                            Monthly Sales Trend
+                        </h3>
+                    </div>
+                </div>
+                <p class="chart-description">
+                    Monthly sales performance from 2014 through 2017.
+                </p>
+                <img src="assets/monthly-sales.png" alt="Line chart showing monthly sales trend">
+            </div>
+        </section>
+
+
+        <!-- =========================
+             BUSINESS INSIGHTS
+        ========================== -->
+
+        <section id="insights">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">
+                        03 / FINDINGS
+                    </span>
+                    <h2>
+                        Business Insights
+                    </h2>
+                    <p>
+                        Statistical findings and AI-generated business recommendations.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Standard EDA Findings -->
+            <div class="insights-grid">
+                <div class="insight-card">
+                    <div class="insight-top">
+                        <span class="insight-number">
+                            01
+                        </span>
+                        <span class="insight-tag">
+                            CATEGORY
+                        </span>
+                    </div>
+                    <h3>
+                        Technology Leads
+                    </h3>
+                    <p>
+                        Technology generated the highest category sales
+                        with approximately <strong>$836K</strong>.
+                    </p>
+                    <div class="insight-line"></div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-top">
+                        <span class="insight-number">
+                            02
+                        </span>
+                        <span class="insight-tag">
+                            REGION
+                        </span>
+                    </div>
+                    <h3>
+                        West Region Leads
+                    </h3>
+                    <p>
+                        The West region recorded the highest sales with
+                        approximately <strong>$725K</strong>.
+                    </p>
+                    <div class="insight-line"></div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-top">
+                        <span class="insight-number">
+                            03
+                        </span>
+                        <span class="insight-tag">
+                            PRODUCT
+                        </span>
+                    </div>
+                    <h3>
+                        Top-Selling Product
+                    </h3>
+                    <p>
+                        The
+                        <strong>
+                            Canon imageCLASS 2200 Advanced Copier
+                        </strong>
+                        was the best-selling product by sales.
+                    </p>
+                    <div class="insight-line"></div>
+                </div>
+            </div>
+
+            <!-- AI-Powered Insights -->
+            <div class="ai-insights-card">
+                <div class="ai-insights-header">
+                    <div class="ai-title-wrapper">
+                        <div class="ai-icon">
+                            AI
+                        </div>
+                        <div>
+                            <span class="ai-label">
+                                GENERATED BY ANALYSIS AGENT
+                            </span>
+                            <h3>
+                                AI-Powered Business Insights
+                            </h3>
+                        </div>
+                    </div>
+                    <span class="ai-badge">
+                        GROQ LLM
+                    </span>
+                </div>
+
+                <div class="ai-intro">
+                    <p>
+                        The Analysis Agent used statistical results from the
+                        cleaned Superstore dataset and passed them to a Groq
+                        large language model to generate business-oriented
+                        observations and recommendations.
+                    </p>
+                </div>
+
+                <div class="ai-insights-grid">
+                    <div class="ai-insight-item">
+                        <span class="ai-item-number">
+                            01
+                        </span>
+                        <div>
+                            <h4>
+                                Overall Performance
+                            </h4>
+                            <p>
+                                The dataset generated approximately
+                                <strong>$2.30M in sales</strong> and
+                                <strong>$286K in profit</strong>,
+                                indicating strong overall business
+                                performance.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ai-insight-item">
+                        <span class="ai-item-number">
+                            02
+                        </span>
+                        <div>
+                            <h4>
+                                Top Product
+                            </h4>
+                            <p>
+                                The
+                                <strong>
+                                    Canon imageCLASS 2200 Advanced Copier
+                                </strong>
+                                was the highest-selling product by total
+                                sales, making it an important product
+                                to monitor.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ai-insight-item">
+                        <span class="ai-item-number">
+                            03
+                        </span>
+                        <div>
+                            <h4>
+                                Regional Opportunity
+                            </h4>
+                            <p>
+                                The <strong>West region</strong> recorded
+                                the highest sales, suggesting that successful
+                                strategies in this region can provide useful
+                                patterns for other markets.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="ai-insight-item">
+                        <span class="ai-item-number">
+                            04
+                        </span>
+                        <div>
+                            <h4>
+                                Category Performance
+                            </h4>
+                            <p>
+                                <strong>Technology</strong> generated the
+                                highest sales and was also the most profitable
+                                category in the analyzed dataset.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ai-recommendation">
+                    <div class="recommendation-heading">
+                        <span>
+                            ✦
+                        </span>
+                        <strong>
+                            AI Recommendations
+                        </strong>
+                    </div>
+                    <ul>
+                        <li>
+                            Continue focusing on high-performing Technology
+                            products while monitoring their profitability.
+                        </li>
+                        <li>
+                            Study the successful sales patterns in the West
+                            region and consider applying relevant strategies
+                            to lower-performing regions.
+                        </li>
+                        <li>
+                            Monitor top-selling products such as the Canon
+                            imageCLASS 2200 Advanced Copier for inventory
+                            and sales opportunities.
+                        </li>
+                        <li>
+                            Use the monthly sales trend to identify periods
+                            of higher demand and support future sales planning.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =========================
+             PROCESSING PIPELINE
+        ========================== -->
+
+        <section id="pipeline" class="pipeline-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">
+                        04 / WORKFLOW
+                    </span>
+                    <h2>
+                        Processing Pipeline
+                    </h2>
+                    <p>
+                        How the raw retail dataset was transformed into
+                        this dashboard and AI-powered analysis.
+                    </p>
+                </div>
+            </div>
+
+            <div class="pipeline">
+                <div class="pipeline-step">
+                    <span class="pipeline-number">
+                        01
+                    </span>
+                    <strong>
+                        Raw CSV
+                    </strong>
+                    <small>
+                        Superstore Dataset
+                    </small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="pipeline-number">
+                        02
+                    </span>
+                    <strong>
+                        Orchestrator
+                    </strong>
+                    <small>
+                        LLM Routing
+                    </small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="pipeline-number">
+                        03
+                    </span>
+                    <strong>
+                        Clean Agent
+                    </strong>
+                    <small>
+                        Clean &amp; Validate
+                    </small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="pipeline-number">
+                        04
+                    </span>
+                    <strong>
+                        Analysis Agent
+                    </strong>
+                    <small>
+                        EDA + AI Insights
+                    </small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="pipeline-number">
+                        05
+                    </span>
+                    <strong>
+                        Visualization
+                    </strong>
+                    <small>
+                        Create Charts
+                    </small>
+                </div>
+
+                <div class="pipeline-arrow">
+                    →
+                </div>
+
+                <div class="pipeline-step">
+                    <span class="pipeline-number">
+                        06
+                    </span>
+                    <strong>
+                        Dashboard
+                    </strong>
+                    <small>
+                        Final Output
+                    </small>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+        <div class="footer-content">
+            <div>
+                <strong>
+                    Retail Analytics
+                </strong>
+                <span>
+                    Multi-Agent Sales Pipeline
+                </span>
+            </div>
+            <p>
+                Python · LangGraph · LangChain · Groq · Static HTML/CSS
+            </p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
