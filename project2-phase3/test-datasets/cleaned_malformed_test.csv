@@ -1,0 +1,5 @@
+order_id,order_date,product,sales
+1,2026-01-01,Laptop,1200
+2,,Mouse,abc
+3,2026-01-03,Keyboard,450
+4,2026-01-04,Unknown,700
